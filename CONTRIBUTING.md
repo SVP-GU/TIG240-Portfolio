@@ -109,3 +109,19 @@ If you've been nominated as a track lead for your challenge:
 3. Approve and merge once it's good.
 4. Help your peers resolve merge conflicts on the challenge index.
 5. Maintain `docs/challenges/<your-challenge>/index.md` — keep the framing and group list up to date.
+6. Review and approve PRs against class-level decisions (purpose, schema, coupling). Any track lead can merge these once approved.
+
+## Who reviews and merges what
+
+Branch protection requires one approval before any PR is merged into `main`. The reviewer expected for each file is encoded in [`.github/CODEOWNERS`](.github/CODEOWNERS) and summarised here:
+
+| File pattern | Reviewer | Merges |
+|---|---|---|
+| `docs/challenges/<challenge>/<park>.md` | Track lead of that challenge | Track lead |
+| `docs/challenges/<challenge>/index.md` | Track lead of that challenge | Track lead |
+| `docs/decisions/axes-of-variation/<challenge>.md` | Track lead of that challenge | Track lead |
+| `docs/decisions/{purpose,schema,coupling,schema-candidates}.md` | Any track lead (all four are tagged) | Any track lead |
+| `docs/adr/NNNN-*.md` | Instructor | Instructor |
+| Repo infrastructure (`mkdocs.yml`, this file, README, workflows, CODEOWNERS) | Instructor | Instructor |
+
+Class-level decision files (`purpose.md`, `schema.md`, `coupling.md`) only change via PR with a clear reference to the class agreement they reflect. Once a class-level decision is in place, the way to revise it is to open an **ADR** under `docs/adr/`, which the instructor reviews. ADRs are the escalation valve.

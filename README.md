@@ -33,6 +33,22 @@ Then open <http://127.0.0.1:8000>.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the PR workflow used in Session 2.
 
+## First-time setup (instructor)
+
+After pushing this repository to GitHub for the first time:
+
+1. **Settings → Pages → Source** — set to **GitHub Actions**. Required for the deploy workflow to publish the site.
+2. **Settings → Branches → Branch protection rules** — add a rule for `main`:
+   - Require a pull request before merging
+   - Require approvals: **1**
+   - Require review from Code Owners
+   - Block force pushes
+   - Block deletions
+   - (Optional) Require status checks to pass — select the `build` job from the deploy workflow once it has run at least once.
+3. **`.github/CODEOWNERS`** — replace the `@TRACK-LEAD-*` and `@INSTRUCTOR` placeholders with the real GitHub usernames (track leads nominated in Session 1, instructor's own handle).
+
+Until step 3 is done, "Require review from Code Owners" should be left **off** — GitHub silently ignores rules whose owners don't resolve, but the placeholders will produce confusing reviewer prompts.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).

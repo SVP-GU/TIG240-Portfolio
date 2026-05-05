@@ -17,8 +17,8 @@ docs/decisions/axes-of-variation/polarization.md    @TRACK-LEAD-POLARIZATION
 docs/challenges/heal-internet/                      @Willeerikssonn
 docs/decisions/axes-of-variation/heal-internet.md   @Willeerikssonn
 
-docs/challenges/eurostack/                          @JasmineDidari
-docs/decisions/axes-of-variation/eurostack.md       @JasmineDidari
+docs/challenges/eurostack/                          @albinaronsson1
+docs/decisions/axes-of-variation/eurostack.md       @albinaronsson1
 
 docs/challenges/job-automation/                     @olle-jamtheden
 docs/decisions/axes-of-variation/job-automation.md  @olle-jamtheden
@@ -27,12 +27,12 @@ docs/decisions/axes-of-variation/job-automation.md  @olle-jamtheden
 # All four track leads are tagged for visibility; any one approval satisfies
 # branch protection.
 
-docs/decisions/purpose.md             @TRACK-LEAD-POLARIZATION @Willeerikssonn @JasmineDidari @olle-jamtheden
-docs/decisions/schema.md              @TRACK-LEAD-POLARIZATION @Willeerikssonn @JasmineDidari @olle-jamtheden
-docs/decisions/schema-candidates.md   @TRACK-LEAD-POLARIZATION @Willeerikssonn @JasmineDidari @olle-jamtheden
-docs/decisions/coupling.md            @TRACK-LEAD-POLARIZATION @Willeerikssonn @JasmineDidari @olle-jamtheden
-docs/decisions/index.md               @TRACK-LEAD-POLARIZATION @Willeerikssonn @JasmineDidari @olle-jamtheden
-docs/decisions/axes-of-variation/index.md @TRACK-LEAD-POLARIZATION @Willeerikssonn @JasmineDidari @olle-jamtheden
+docs/decisions/purpose.md             @TRACK-LEAD-POLARIZATION @Willeerikssonn @albinaronsson1 @olle-jamtheden
+docs/decisions/schema.md              @TRACK-LEAD-POLARIZATION @Willeerikssonn @albinaronsson1 @olle-jamtheden
+docs/decisions/schema-candidates.md   @TRACK-LEAD-POLARIZATION @Willeerikssonn @albinaronsson1 @olle-jamtheden
+docs/decisions/coupling.md            @TRACK-LEAD-POLARIZATION @Willeerikssonn @albinaronsson1 @olle-jamtheden
+docs/decisions/index.md               @TRACK-LEAD-POLARIZATION @Willeerikssonn @albinaronsson1 @olle-jamtheden
+docs/decisions/axes-of-variation/index.md @TRACK-LEAD-POLARIZATION @Willeerikssonn @albinaronsson1 @olle-jamtheden
 
 # ---------- ADRs and repo infrastructure ----------
 # ADRs revise existing decisions, so they need instructor approval.

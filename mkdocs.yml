@@ -1,0 +1,60 @@
+site_name: TIG240 Portfolio
+site_description: Shared portfolio of student projects in TIG240 — Data-Driven Organizational Development, Spring 2026
+site_url: https://svp-gu.github.io/TIG240-Portfolio/
+repo_url: https://github.com/SVP-GU/TIG240-Portfolio
+repo_name: SVP-GU/TIG240-Portfolio
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - content.code.copy
+    - toc.integrate
+  palette:
+    - scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Challenges:
+    - Polarization: challenges/polarization/index.md
+    - Heal Internet: challenges/heal-internet/index.md
+    - Eurostack: challenges/eurostack/index.md
+    - Job Automation: challenges/job-automation/index.md
+  - Decisions:
+    - Overview: decisions/index.md
+    - Purpose: decisions/purpose.md
+    - Schema: decisions/schema.md
+    - Schema candidates: decisions/schema-candidates.md
+    - Coupling: decisions/coupling.md
+    - Axes of variation:
+      - Overview: decisions/axes-of-variation/index.md
+      - Polarization: decisions/axes-of-variation/polarization.md
+      - Heal Internet: decisions/axes-of-variation/heal-internet.md
+      - Eurostack: decisions/axes-of-variation/eurostack.md
+      - Job Automation: decisions/axes-of-variation/job-automation.md
+  - ADRs:
+    - Overview: adr/index.md
+    - Template: adr/0000-template.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
+  - toc:
+      permalink: true

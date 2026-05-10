@@ -9,7 +9,7 @@ The class chooses the schema in Session 1 — see [Schema candidates](schema-can
 
 ## Decision
 
-Vo kommer överens om att använda Schema A från de exempel som fanns tillgängliga. 
+Vi kommer överens om att använda Schema A från de exempel som fanns tillgängliga. 
 
 ## Required fields
 

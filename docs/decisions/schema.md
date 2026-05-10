@@ -9,16 +9,32 @@ The class chooses the schema in Session 1 — see [Schema candidates](schema-can
 
 ## Decision
 
-> *(To be filled in.)*
+Vo kommer överens om att använda Schema A från de exempel som fanns tillgängliga. 
 
 ## Required fields
 
-> *(To be filled in.)*
+Field,	Type,	Notes
+
+group_name,	string,	e.g. Hamra
+
+challenge,	enum, one of polarization, heal-internet, eurostack, job-automation
+
+app_title,	string
+
+one_liner,	string ≤ 140 chars	
+
+live_url, URL link to deployed prototype
+
+repo_url, URL link to the group's GitHub repo
+
+team_members, list of strings	
 
 ## Optional fields
 
-> *(To be filled in.)*
+Inga fält i schemat är frivilliga. 
 
 ## Notes on enforcement
 
-> *(Optional. How will track leads check schema compliance during PR review? E.g. checklist in PR description, or a CI script.)*
+- Pull requests ska granskas innan merge.
+- Reviewers kontrollerar att alla obligatoriska fält i schemat är ifyllda.
+- Felaktiga eller ofullständiga schemafält ska rättas innan godkännande.

@@ -15,8 +15,8 @@ In Session 1, the class will rank, refine, or replace these.
 
 ## Decision
 
-> *(To be filled in.)*
+Showcase. Klassen väljer att fokus ska ligga på extern presentation av vad vi har skapat och åstadkommit denna kurs. 
 
 ## Implications for the schema
 
-> *(Filled in once the purpose is agreed — different purposes imply different required fields.)*
+Vi vill fånga uppmärksamheten av externa intressenter snabbt. Detta leder oss till att välja en mer avskalad schema för att hålla enklare och mer fokuserat. Målet är att fånga uppmärksamheten för att locka personer att undersöka resten av vårt repo. 

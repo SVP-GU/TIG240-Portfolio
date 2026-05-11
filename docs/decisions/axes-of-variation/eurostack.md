@@ -13,7 +13,17 @@
 
 ## Agreed axes
 
-> *(To be filled in by the cluster in Session 1.)*
+- **1. Layer of the Stack**: vart i stacken befinner sig er lösning?  
+  **Possible values:** Cloud infrastructure / Developer tooling / Platforms / Applications / Data & AI services
+
+- **2. Sovereignty Focus**: vad är det som er lösning fokuserar på att göra mer självständigt i Europa?  
+  **Possible values:** Data sovereignty / Compute sovereignty / AI sovereignty / Supply-chain sovereignty / Talent sovereignty / Regulatory interoperability
+
+- **3. Criticality Level**: hur samhällskritisk funktionen är.  
+  **Possible values:** Core infrastructure / Public services / Enterprise operations / Consumer convenience / Experimental / research
+
+- **4. Governance / Coordination Model**: hur organiseras och styrs lösningen?  
+  **Possible values:** Open-source community / Foundation-led / Public-sector-led / Private company / Public-private partnership / Federated ecosystem
 
 ## Group positions
 

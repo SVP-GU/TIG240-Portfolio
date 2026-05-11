@@ -4,7 +4,13 @@
 
 ## Problem framing
 
-> **TODO (track lead, after Session 1):** 2–3 paragraphs describing the shared problem space — what "Eurostack" means in this challenge, why it matters, what kinds of approaches are in scope.
+Eurostack syftar på hela kedjan av digital infrastruktur som Europa är beroende av: chip, nätverk, moln, mjukvara, plattformar och AI. Idag domineras nästan varje lager av icke-europeiska aktörer, främst amerikanska jättar – EU-företag spenderar enorma summor varje år på moln och mjukvara från USA. Eurostack handlar om att vända denna utveckling.
+
+Frågan är viktig av tre skäl: säkerhet och suveränitet (känslig data lyder under utomeuropeisk lag), ekonomi (värdet av digital konsumtion lämnar kontinenten istället för att bygga europeisk industri), och geopolitik. När spänningar uppstår med andra kontinenter, 
+
+De tekniska byggstenarna finns redan i Europa – det som saknas är skala och efterfrågan.
+Inom ramen för denna utmaning ryms därför lösningar som stärker Europas tekniska självständighet och motståndskraft. Det kan handla om europeiska molntjänster, AI-infrastruktur, cybersäkerhet, öppna standarder, open-source-lösningar, datahantering, digital identitet eller verktyg som gör det enklare för organisationer att använda och utveckla europeisk teknologi. Fokus ligger inte nödvändigtvis på fullständig självförsörjning, utan på att minska kritiska beroenden och skapa ett starkare och mer konkurrenskraftigt europeiskt digitalt ekosystem. 
+
 
 ## Axes of variation
 

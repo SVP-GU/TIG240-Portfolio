@@ -4,7 +4,9 @@
 
 ## Problem framing
 
-> **TODO (track lead, after Session 1):** 2–3 paragraphs describing the shared problem space — what "polarization" means in this challenge, why it matters, what kinds of approaches are in scope.
+> **TODO (track lead, after Session 1):**
+Political polarization within social media refers to how people increasingly become separated into ideological groups with limited interaction or understanding between them. Social platforms can reinforce this through recommendation algorithms, echo chambers, misinformation, and engagement-driven content, which may increase hostility and reduce constructive public discourse.
+This track explores how digital systems and platform design can either contribute to or reduce polarization online. Projects may focus on areas such as recommendation systems, media literacy, moderation, discussion tools, transparency, or interventions that encourage healthier and more diverse online interactions. Both technical and non-technical approaches are within scope.
 
 ## Axes of variation
 

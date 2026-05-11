@@ -13,10 +13,13 @@
 
 ## Agreed axes
 
-*Type of solution*: tool / platform / community / policy
-*Decision-making*: algorithmic / moderator-led / community-led / user-controlled
-*Role of users*: consumers / contributors / moderators / organizers
-*Approach*: technical / educational / regulatory / community-organizing
+- *Type of solution*: tool / platform / community / policy
+
+- *Decision-making*: algorithmic / moderator-led / community-led / user-controlled
+
+- *Role of users*: consumers / contributors / moderators / organizers
+
+- *Approach*: technical / educational / regulatory / community-organizing
 
 ## Group positions
 

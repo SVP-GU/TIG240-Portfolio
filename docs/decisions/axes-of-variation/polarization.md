@@ -13,7 +13,10 @@
 
 ## Agreed axes
 
-> *(To be filled in by the cluster in Session 1.)*
+1. Polarization Mechanism – Echo chambers / algorithmic amplification / misinformation / toxic discourse / lack of cross-group understanding / political disengagement
+2. Intervention Strategy – Opposing viewpoints / friction before sharing / fact-checking / deliberative discussion / recommendation redesign / media literacy
+3. Level of Agency – User-driven / platform-assisted / automated / moderator-driven / regulator-driven
+4. Desired Outcome – Reduced extremity / viewpoint diversity / better discussions / less misinformation / political understanding / civic participation
 
 ## Group positions
 

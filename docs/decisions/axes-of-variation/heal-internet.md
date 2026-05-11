@@ -13,7 +13,10 @@
 
 ## Agreed axes
 
-> *(To be filled in by the cluster in Session 1.)*
+*Type of solution*: tool / platform / community / policy
+*Decision-making*: algorithmic / moderator-led / community-led / user-controlled
+*Role of users*: consumers / contributors / moderators / organizers
+*Approach*: technical / educational / regulatory / community-organizing
 
 ## Group positions
 

@@ -23,7 +23,7 @@ See [`decisions/axes-of-variation/eurostack.md`](../../decisions/axes-of-variati
 - [Garphyttan](garphyttan.md)
 Hitta kommuner med samma behov – var som helst i landet. Gå ihop, bli köpstarka, och öppna dörren för europeiska alternativ.
 - *Muddus*
-- *Töfsingdalen*
+- [Töfsingdalen](tofsingdalen.md)
 
 ## Differentiators
 

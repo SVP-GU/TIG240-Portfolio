@@ -23,7 +23,7 @@ See [`decisions/axes-of-variation/job-automation.md`](../../decisions/axes-of-va
 - *Abisko* 
 - *Padjelanta* 
 - *Skuleskogen* 
-- *Ängsö* https://www.kompetenskoll.gt.tc/?i=2
+- [*Ängsö*](Ängsö.md)
 
 ## Differentiators
 

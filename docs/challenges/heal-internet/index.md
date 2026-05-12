@@ -18,8 +18,8 @@ See [`decisions/axes-of-variation/heal-internet.md`](../../decisions/axes-of-var
 
 > **TODO (each group):** Add a one-line entry below as part of your Session 2 PR.
 
-- [*Björnlandet*](bjornlandet.md)
-- *Stenshuvud*
+- *Björnlandet*
+- [*Stenshuvud*](stenshuvud.md)
 - *Sonfjället*
 
 ## Differentiators

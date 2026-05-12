@@ -20,7 +20,8 @@ See [`decisions/axes-of-variation/eurostack.md`](../../decisions/axes-of-variati
 
 > **TODO (each group):** Add a one-line entry below as part of your Session 2 PR.
 
-- *Garphyttan*
+- [Garphyttan](garphyttan.md)
+Hitta kommuner med samma behov – var som helst i landet. Gå ihop, bli köpstarka, och öppna dörren för europeiska alternativ.
 - *Muddus*
 - *Töfsingdalen*
 

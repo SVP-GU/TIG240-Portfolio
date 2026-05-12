@@ -12,7 +12,7 @@
 - **One-liner:** Varför skriva på lapp när man kan hitta på app
 - **Live URL:** http://www.kompetenskolltest.gt.tc/ 
 - **Repo URL:**  https://github.com/SVP-GU/group-project-angso.git 
-- **Team members:** Olle Hämtheden
+- **Team members:** Olle Jämtheden, Sophia Svensson, Elin Nilsson Eriksson, Kalle Sjögren Pulkkinen, Tage Brax
 - *(more fields per the agreed schema)*
 
 ## How we differ from peers

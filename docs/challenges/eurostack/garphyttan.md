@@ -18,7 +18,7 @@ TBD
 https://github.com/SVP-GU/group-project-garphyttan 
 
 - **Team members:**
-Ellen Bladh, David Haaker, Eric Jonsson , Albin Aronsson och Reja Said
+Ellen Bladh, David Haaker, Eric Jonsson, Albin Aronsson och Reja Said
 
 
 ## How we differ from peers

@@ -27,11 +27,14 @@ Hitta kommuner med samma behov – var som helst i landet. Gå ihop, bli köpsta
 Verktyg för organisationer i elbranshens för att utforska den utlänska riskytan av organisationers systemlandskap. Utforska, utred och gör beslut för att upgradera europeiska elnät!
 
 - *Töfsingdalen*
+- *Muddus*
+- [Töfsingdalen](tofsingdalen.md)
 
 ## Differentiators
 
 > **TODO (each group, async):** One-line summary of how your app differs from the others in this challenge.
 
 - **Garphyttan:**
+Vår lösning tar sig an uppgiften att säkerställa att skattemedel inte finansierar stora jättar utanför Europa för att öka europeisk suveränitet. 
 - **Muddus:**
 - **Töfsingdalen:**

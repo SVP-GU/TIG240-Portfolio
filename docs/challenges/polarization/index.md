@@ -19,6 +19,8 @@ See [`decisions/axes-of-variation/polarization.md`](../../decisions/axes-of-vari
 - *Hamra*
 - *Sarek* (sarek.md)
 - *Pieljekaise*
+- *Sarek*
+- [Pieljekaise](pieljekaise.md)
 - *Tiveden*
 
 ## Differentiators
@@ -27,5 +29,5 @@ See [`decisions/axes-of-variation/polarization.md`](../../decisions/axes-of-vari
 
 - **Hamra:**
 - **Sarek:**
-- **Pieljekaise:**
+- **Pieljekaise:** Medan andra grupper fokuserar på innehållet, synliggör vår lösning hur användarens flöde och algoritmer kan skapa filterbubblor och polarisering över tid.
 - **Tiveden:**

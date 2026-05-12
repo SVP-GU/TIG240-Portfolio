@@ -30,4 +30,4 @@ See [`decisions/axes-of-variation/eurostack.md`](../../decisions/axes-of-variati
 
 - **Garphyttan:**
 - **Muddus:**
-- **Töfsingdalen:**
+- **Töfsingdalen:** Vi hjälper konsultbolag (Aixia) att minska sitt beroende av icke-europeiska tech-leverantörer. 

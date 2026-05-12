@@ -28,4 +28,4 @@
 | Abisko | | | | |
 | Padjelanta | | | | |
 | Skuleskogen | | | | |
-| Ängsö | | | | |
+| Ängsö |Managers |Augment |Tool |Structured |

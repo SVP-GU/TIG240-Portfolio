@@ -6,13 +6,13 @@
 
 *(These will be replaced with the fields agreed in Session 1.)*
 
-- **Group name:**
-- **Challenge:** *(polarization | heal-internet | eurostack | job-automation)*
-- **App title:**
-- **One-liner:**
-- **Live URL:**
-- **Repo URL:**
-- **Team members:**
+- **Group name:** Ängsö
+- **Challenge:** Job-automation (förklara tydligare)
+- **App title:** Kompetenskoll
+- **One-liner:** Varför skriva på lapp när man kan hitta på app
+- **Live URL:** http://www.kompetenskolltest.gt.tc/ 
+- **Repo URL:**  https://github.com/SVP-GU/group-project-angso.git 
+- **Team members:** Olle Hämtheden
 - *(more fields per the agreed schema)*
 
 ## How we differ from peers

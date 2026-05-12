@@ -6,7 +6,7 @@
 
 *(These will be replaced with the fields agreed in Session 1.)*
 
-- **Group name:**
+- **Group name:** Töfsingdalen
 - **Challenge:** *(polarization | heal-internet | eurostack | job-automation)*
 - **App title:**
 - **One-liner:**

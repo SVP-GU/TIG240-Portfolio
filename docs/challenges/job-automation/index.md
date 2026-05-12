@@ -20,10 +20,10 @@ See [`decisions/axes-of-variation/job-automation.md`](../../decisions/axes-of-va
 
 > **TODO (each group):** Add a one-line entry below as part of your Session 2 PR.
 
-- *Abisko*
-- *Padjelanta*
-- *Skuleskogen*
-- *Ängsö*
+- *Abisko* 
+- *Padjelanta* 
+- *Skuleskogen* 
+- *Ängsö* https://www.kompetenskoll.gt.tc/?i=2
 
 ## Differentiators
 

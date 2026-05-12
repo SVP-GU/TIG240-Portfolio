@@ -22,7 +22,7 @@ See [`decisions/axes-of-variation/eurostack.md`](../../decisions/axes-of-variati
 
 - *Garphyttan*
 - *Muddus*
-- *Töfsingdalen*
+- [Töfsingdalen](tofsingdalen.md)
 
 ## Differentiators
 

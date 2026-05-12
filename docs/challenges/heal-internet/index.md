@@ -20,7 +20,7 @@ See [`decisions/axes-of-variation/heal-internet.md`](../../decisions/axes-of-var
 
 - *Björnlandet*
 - *Stenshuvud*
-- *Sonfjället*
+- [Sonfjället](Solfjället.md)
 
 ## Differentiators
 

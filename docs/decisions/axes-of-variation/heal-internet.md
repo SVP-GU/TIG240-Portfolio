@@ -29,4 +29,4 @@
 |---|---|---|---|---|
 | Björnlandet | | | | |
 | Stenshuvud | | | | |
-| Sonfjället | | | | |
+| Sonfjället |*community* |*user controlled* |*contributers & consumers* | *technical & community-organizing*|

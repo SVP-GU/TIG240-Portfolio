@@ -37,4 +37,4 @@ Verktyg för organisationer i elbranshens för att utforska den utlänska riskyt
 - **Garphyttan:**
 Vår lösning tar sig an uppgiften att säkerställa att skattemedel inte finansierar stora jättar utanför Europa för att öka europeisk suveränitet. 
 - **Muddus:**
-- **Töfsingdalen:**
+- **Töfsingdalen:** Vi hjälper konsultbolag (Aixia) att minska sitt beroende av icke-europeiska tech-leverantörer. 

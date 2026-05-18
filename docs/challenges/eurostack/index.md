@@ -24,7 +24,6 @@ See [`decisions/axes-of-variation/eurostack.md`](../../decisions/axes-of-variati
 Hitta kommuner med samma behov – var som helst i landet. Gå ihop, bli köpstarka, och öppna dörren för europeiska alternativ.
 
 - [Muddus](muddus.md)
-Verktyg för organisationer i elbranshens för att utforska den utlänska riskytan av organisationers systemlandskap. Utforska, utred och gör beslut för att upgradera europeiska elnät!
 
 - *Töfsingdalen*
 - *Muddus*

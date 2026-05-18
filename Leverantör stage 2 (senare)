@@ -1,0 +1,351 @@
+# Vendor Research Pipeline
+
+Manual methodology (what was used for the first 41 vendors) + automated pipeline design (what to build for arbitrary new vendors).
+
+## Problem statement
+
+Two architectural problems with the original sovereignty score approach:
+
+1. **Manual fill-in is circular.** Consultant fills 13 compliance fields → score calculated. But to fill those fields, they need to research the vendor — at which point they already know whether it's sovereign or not. Score adds zero value.
+
+2. **Static dataset doesn't scale.** Pre-filled vendor list works for the 50 listed, but a new/uncommon vendor (every SME has 2–3 obscure local tools) can't be analyzed. The app becomes a lookup table, not an auditor.
+
+**Solution:** automate the research. Input = vendor name. Output = fully-populated profile + score + confidence + sources. The consultant validates, doesn't research.
+
+This also reframes the ML scope: the "NLP on regulatory documents" component already specified in `docs/dataset-strategy.md` is exactly this pipeline.
+
+---
+
+## Part 1: Manual research methodology
+
+Used to populate the first 41 vendors in `data/raw/manual/vendors_source.xlsx`. The automated pipeline replicates this process programmatically.
+
+### The 14 fields per vendor
+
+| # | Field | Type | Values |
+|---|---|---|---|
+| 1 | Företag | string | Free text |
+| 2 | ISO 27001 | enum | Ja / (Ja) / Nej / Unverified |
+| 3 | GDPR commitments/docs | enum | Same |
+| 4 | DORA | enum | Same |
+| 5 | SOC 2 Type II | enum | Same |
+| 6 | C5 Attestation | enum | Same |
+| 7 | NIS2 | enum | Same |
+| 8 | Storage Region | string | Country list or "Globalt" |
+| 9 | Processing Region | string | Same |
+| 10 | Company Origin | string | "Country, City" |
+| 11 | Avtal | string | DPA / DPA+SLA / similar |
+| 12 | US CLOUD ACT | enum | Nej / Exposure |
+| 13 | Confidence | enum | High / Average / Low |
+| 14 | Källa | URL | Canonical trust page |
+
+### Decision rules per field type
+
+**Certification fields (ISO 27001, GDPR, DORA, SOC 2, C5, NIS2):**
+
+- `Ja` — Vendor explicitly claims current certification on their own trust/compliance page.
+- `(Ja)` — Vendor claims alignment without formal certification, OR has it for some products only, OR the status is publicly contested.
+- `Nej` — Vendor explicitly states they don't have it (rare; usually it's just an omission).
+- `Unverified` — Not mentioned on the vendor's own pages, even if third-party sources claim it.
+
+**Strict regel:** If only a third-party (review site, comparison aggregator) claims a cert, mark `Unverified`. Only the vendor's own statements count.
+
+**Company Origin:**
+
+- Format: `Country, City`
+- Use corporate HQ, not founding location, when these differ.
+- If owned by a foreign entity, that doesn't change Origin — but it does change CLOUD Act exposure.
+
+**US CLOUD ACT:**
+
+- `Exposure` if vendor is US-incorporated.
+- `Exposure` if vendor is owned by a US parent (e.g., Pipedrive owned by Vista Equity Partners).
+- `Nej` only if vendor is EU/CH/UK-incorporated with no US parent.
+- **Datacenter location does NOT determine this.** AWS Frankfurt is in EU geography but US jurisdiction.
+
+**Confidence:**
+
+- `High` — Public trust center exists, 5+ cert fields populated explicitly (Ja or Nej).
+- `Average` — Partial trust info, 3–4 cert fields populated, some Unverified.
+- `Low` — No public trust center, mostly Unverified, only inferred values.
+
+### Source authority hierarchy
+
+Trust the source in this order. If lower-priority source contradicts higher, the higher wins.
+
+1. **Official trust/compliance pages:**
+   - `{vendor}.com/trust` or `/trust-center`
+   - `{vendor}.com/security`
+   - `{vendor}.com/compliance`
+   - `{vendor}.com/legal/privacy`
+2. **SafeBase-hosted trust portals** (third-party but vendor-controlled):
+   - `security.{vendor}.com`
+   - `{vendor}.safebase.us`
+3. **Official press releases** announcing specific certifications (dated; check for renewal).
+4. **Third-party aggregators** — only as confirmation, and only if they cite official sources.
+
+### Search query patterns
+
+Initial discovery (one search usually enough):
+```
+{vendor} trust center compliance ISO 27001 SOC 2 GDPR
+{vendor} security certifications data center
+site:{vendor}.com privacy security
+```
+
+Specific cert verification (when initial search is ambiguous):
+```
+{vendor} BSI C5 attestation
+{vendor} DORA NIS2 compliance
+{vendor} SOC 2 Type II report
+{vendor} data residency EU
+```
+
+### Common pitfalls (real examples from the 41-vendor dataset)
+
+- **"Aligns with" ≠ certified to.** Fortnox says their security work "utgår från kraven i ISO 27001" — that's alignment, not certification. Mark `(Ja)`, not `Ja`.
+- **DPA exists ≠ GDPR-compliant in practice.** Meta has DPAs *and* a €1.2B GDPR fine. Use `(Ja)` when enforcement contradicts the formal status.
+- **EU datacenter ≠ EU jurisdiction.** AWS Frankfurt is physically in Germany but legally subject to CLOUD Act. Datacenter location and corporate jurisdiction are independent.
+- **Founded-in-X vs HQ-in-Y vs owned-by-Z.** Pipedrive: founded Tallinn, HQ NYC, owned by Vista Equity Partners (US). Origin = HQ. CLOUD Act = Exposure (US ownership).
+- **Stale press releases.** A 2021 ISO 27001 cert may have lapsed by 2026. Look for "renewed" or check current cert validity dates.
+- **WhatsApp ≠ Meta Ads.** Meta has ISO 27001 for WhatsApp Cloud API specifically — but that doesn't extend to the Ads/Pixel product. Be specific about which product is covered.
+
+---
+
+## Part 2: Automated pipeline design
+
+### Architecture
+
+```
+┌─────────────────────┐
+│  Input: vendor name │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ 1. Discovery        │ Try URL patterns. Fallback to web search.
+│  - URL heuristics   │ Output: list of candidate trust-page URLs.
+│  - Search fallback  │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ 2. Fetch            │ requests + BeautifulSoup. Strip nav/footer/scripts.
+│  - HTTP get         │ Concat all candidate pages.
+│  - Clean text       │ Output: cleaned text blob.
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ 3. Extract          │ Single LLM call with structured prompt.
+│  - LLM extraction   │ Encodes the strict regel and decision rules.
+│  - JSON output      │ Output: dict with the 10 LLM-extractable fields.
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ 4. Derive           │ Rules-based:
+│  - CLOUD Act rule   │  - cloud_act_exposure from origin + ownership
+│  - Confidence rule  │  - confidence from field coverage
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ 5. Score            │ Port formula from Quiz.tsx:185-214
+│  - Sovereignty 0-100│ score = quick·0.35 + deep·0.35
+│                     │       + euWeight·0.15 + readiness·0.15
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ 6. Cache + persist  │ Append to data/processed/vendors.csv
+│  - timestamped row  │ Future calls hit cache, not LLM.
+└─────────────────────┘
+```
+
+### Tech stack
+
+- Python 3.11+
+- `requests` + `beautifulsoup4` — fetch + parse static pages
+- `anthropic` SDK — LLM extraction (free credits work fine for testing)
+- `pandas` — read/write `vendors.csv`
+- `streamlit` — UI integration in the existing app
+
+Optional later:
+- `playwright` — only if you hit JS-heavy trust pages (rare; most are static HTML)
+- `redis` — caching (use simple JSON file for MVP)
+
+### MVP scope (≤5 days work)
+
+Build:
+
+| Stage | Effort | Deliverable |
+|---|---|---|
+| Discovery (URL patterns + search fallback) | 1 day | `discover_trust_pages(name) → list[str]` |
+| Fetch (requests-only) | 0.5 day | `fetch_clean_text(urls) → str` |
+| Extract (single LLM prompt, JSON output) | 1 day | `extract_fields_via_llm(text, name) → dict` |
+| Derive (CLOUD Act + confidence) | 0.5 day | Two pure functions, unit-testable |
+| Score (port from Quiz.tsx) | 0.5 day | `compute_sovereignty_score(profile) → int` |
+| Streamlit integration | 1 day | "Add new vendor" flow in the app |
+
+Skip for now:
+- Real-time monitoring of cert changes
+- Multi-language site support (English-only is fine for EU B2B SaaS)
+- PDF parsing for downloadable certs (most claims are in HTML)
+- Playwright (most trust pages render server-side)
+
+### LLM extraction prompt template
+
+```
+You are analyzing a vendor's compliance profile from their official trust pages.
+
+VENDOR: {vendor_name}
+TRUST PAGE TEXT:
+{cleaned_text}
+
+For each field, answer ONLY based on what the text explicitly states.
+
+DECISION RULES:
+- "Ja" = explicit certification claim on the vendor's own pages
+- "(Ja)" = alignment claim without certification, OR contested status
+- "Nej" = explicit denial of certification
+- "Unverified" = not mentioned (DEFAULT for missing info)
+
+STRICT: If you would have to infer or guess, use "Unverified".
+
+Return JSON with this exact schema:
+{
+  "iso27001": "Ja|(Ja)|Nej|Unverified",
+  "gdpr": "...",
+  "dora": "...",
+  "soc2": "...",
+  "c5_attestation": "...",
+  "nis2": "...",
+  "storage_region": "free text, e.g. 'Germany, Finland'",
+  "processing_region": "free text",
+  "company_origin": "Country, City",
+  "avtal": "DPA|DPA+SLA|other"
+}
+```
+
+### Validation strategy
+
+The 41 manually-researched vendors are the **ground truth dataset**.
+
+```python
+# scripts/validate_pipeline.py outline
+from src.research.auto_research import research_vendor
+
+manual = pd.read_csv("data/processed/vendors.csv")
+results = []
+
+for _, row in manual.iterrows():
+    auto = research_vendor(row["vendor_name"])
+    for field in CERT_FIELDS:
+        results.append({
+            "vendor": row["vendor_name"],
+            "field": field,
+            "manual": row[field],
+            "auto": getattr(auto, field),
+            "match": row[field] == getattr(auto, field)
+        })
+
+accuracy_per_field = pd.DataFrame(results).groupby("field")["match"].mean()
+```
+
+Realistic accuracy targets:
+
+| Field | Target | Why |
+|---|---|---|
+| Company Origin | ≥95% | Easiest — usually in "About us" |
+| ISO 27001 | ≥90% | Most explicit certification |
+| GDPR | ≥85% | Usually well-documented |
+| SOC 2 | ≥85% | Usually has dedicated page |
+| C5 Attestation | ≥80% | Less common, more uneven coverage |
+| Storage Region | ≥75% | Varies by detail level |
+| DORA, NIS2 | ≥70% | Newest regulations, less standardized claims |
+
+A field below target = systematic prompt issue, not vendor-specific noise. Iterate the prompt.
+
+### Connection to course ML requirement
+
+This pipeline satisfies the ML scope from `docs/dataset-strategy.md`:
+
+| Original ML component | Maps to pipeline stage |
+|---|---|
+| Supervised vendor risk classification | Stage 3 (LLM extraction = classification per field) |
+| Unsupervised SME clustering | Separate (KMeans on the final profiles) |
+| NLP on regulatory documents | Stages 1–3 (the whole pipeline IS this) |
+
+The 41-vendor manual dataset = labeled training/eval set. No additional labeling work needed.
+
+---
+
+## Part 3: Streamlit integration
+
+App flow when user enters a vendor name:
+
+```
+User types vendor name
+       │
+       ▼
+Is it in data/processed/vendors.csv?
+   │           │
+  Yes          No
+   │           │
+   ▼           ▼
+Show static  "Not in our dataset. Auto-research now?"
+result        │
+              ▼
+            User clicks "Yes, research it"
+              │
+              ▼
+            Run pipeline with progress bar:
+              "Discovering trust pages... ✓"
+              "Fetching content... ✓"
+              "Extracting fields... ✓"
+              "Computing score... ✓"
+              │
+              ▼
+            Show profile with confidence badge:
+              ┌─────────────────────────────┐
+              │ Acme Corp        Score: 42  │
+              │ Confidence: Average         │
+              │ "Partial info found.        │
+              │  Click cells to verify."    │
+              └─────────────────────────────┘
+              │
+              ▼
+            User reviews, optionally corrects
+              │
+              ▼
+            "Save to dataset" → vendors.csv row added
+```
+
+### Confidence as UX signal
+
+Show confidence prominently — it's the difference between "we know" and "we guessed":
+
+- 🟢 **High** — "Extracted from vendor's trust center. Likely accurate."
+- 🟡 **Average** — "Partial info. Click any cell to verify or correct."
+- 🔴 **Low** — "No public trust info. Recommend manual research."
+
+This is intellectually honest about the LLM's limits, lets the consultant add real value (spotting mistakes), and creates a virtuous cycle where every consultant correction improves the dataset.
+
+### Cache strategy
+
+After successful auto-research:
+1. Append row to `data/processed/vendors.csv` with `auto_researched: true, researched_at: <timestamp>, source_url: <url>`
+2. Future lookups hit cache, no LLM call
+3. Optional: re-research if `researched_at` > 6 months old (cert renewals)
+
+---
+
+## Open questions
+
+1. **LLM choice**: Anthropic API (free tier sufficient for ~100 vendors) vs local Ollama. API simpler; local more sustainable.
+2. **Search fallback**: When URL patterns fail, do we hit a search API (paid) or scrape Google (fragile)?
+3. **Edge case**: vendor with no English site (uncommon for B2B SaaS but happens for local SE/DE tools). Mark Low confidence + skip extraction?
+4. **Cert freshness**: Trust center says "ISO 27001 since 2019" — do we trust it's still valid, or surface this as a confidence penalty?
+
+These can be decided during implementation. The MVP can punt on all four.

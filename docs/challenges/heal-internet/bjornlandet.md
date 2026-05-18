@@ -8,11 +8,11 @@
 
 - **Group name:** Björnlandet 
 - **Challenge:** *heal-internet*
-- **App title:** Kvartersfix 
+- **App title:** Hemmafix 
 - **One-liner:** Ett decentraliserat peer-to-peer forum som kopplar ihop användare i lokala trådchattar där användare delar erfarenheter, hjälp, intressen och kunskap.  
-- **Live URL:** https://github.com/SVP-GU/group-project-bjornlandet/blob/main/Prototype_forum.py 
+- **Live URL:** https://github.com/SVP-GU/group-project-bjornlandet/blob/main/src/app/main3.py 
 - **Repo URL:** https://github.com/SVP-GU/group-project-bjornlandet 
-- **Team members:** William Eriksson, Lova Gustafsson, Moa Forsell, Sofia Novak, Anton Gabrielsson 
+- **Team members:** William Eriksson, Lova Gustafson, Moa Forsell, Sofia Novak, Anton Gabrielsson 
 - *(more fields per the agreed schema)*
 
 ## How we differ from peers

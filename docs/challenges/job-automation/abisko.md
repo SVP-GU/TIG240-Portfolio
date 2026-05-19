@@ -1,19 +1,15 @@
-# Group / Park name
-
-> **Note:** Once Session 1 has agreed the schema (see `docs/decisions/schema.md`), this template will be updated with the actual fields. Until then, treat the structure below as illustrative only.
+# ABISKO
 
 ## Schema fields
 
-*(These will be replaced with the fields agreed in Session 1.)*
 
-- **Group name:**
-- **Challenge:** *(polarization | heal-internet | eurostack | job-automation)*
-- **App title:**
-- **One-liner:**
-- **Live URL:**
-- **Repo URL:**
-- **Team members:**
-- *(more fields per the agreed schema)*
+- **Group name:**ABISKO
+- **Challenge:** job-automation
+- **App title:** Spelarloggen
+- **One-liner:** A plattform aiming to give female fotball teams the opportunity to work more datadriven
+- **Live URL:** Only local right now
+- **Repo URL:**https://github.com/SVP-GU/group-project-abisko.git
+- **Team members:** Agnes, Linn, Max, Nellie, Tilda 
 
 ## How we differ from peers
 

@@ -6,13 +6,13 @@
 
 *(These will be replaced with the fields agreed in Session 1.)*
 
-- **Group name:**
-- **Challenge:** *(polarization | heal-internet | eurostack | job-automation)*
-- **App title:**
+- **Group name:** Sarek
+- **Challenge:** *(polarization)*
+- **App title:** Edit war score
 - **One-liner:**
 - **Live URL:**
 - **Repo URL:**
-- **Team members:**
+- **Team members:** Klara Nordén, Fredric Jonsson, Marcus Serrander, Amina Kenjar, Summer Furniss
 - *(more fields per the agreed schema)*
 
 ## How we differ from peers

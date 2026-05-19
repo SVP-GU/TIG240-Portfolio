@@ -25,7 +25,7 @@
 
 | Group | (axis 1) | (axis 2) | (axis 3) | (axis 4) |
 |---|---|---|---|---|
-| Abisko | | | | |
+| Abisko |Manual workers|Augment|Tool|Structured|
 | Padjelanta | | | | |
 | Skuleskogen | | | | |
 | Ängsö | | | | |

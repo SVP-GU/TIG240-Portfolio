@@ -17,9 +17,7 @@ See [`decisions/axes-of-variation/polarization.md`](../../decisions/axes-of-vari
 > **TODO (each group):** Add a one-line entry below as part of your Session 2 PR.
 
 - *Hamra*
-- *Sarek* (sarek.md)
-- *Pieljekaise*
-- *Sarek*
+- [Sarek](sarek.md)
 - [Pieljekaise](pieljekaise.md)
 - *Tiveden*
 

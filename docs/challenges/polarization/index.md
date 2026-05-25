@@ -3,8 +3,6 @@
 *This page is co-authored by the groups working on the Polarization challenge: Hamra, Sarek, Pieljekaise, Tiveden.*
 
 ## Problem framing
-
-> **TODO (track lead, after Session 1):**
 Political polarization within social media refers to how people increasingly become separated into ideological groups with limited interaction or understanding between them. Social platforms can reinforce this through recommendation algorithms, echo chambers, misinformation, and engagement-driven content, which may increase hostility and reduce constructive public discourse.
 This track explores how digital systems and platform design can either contribute to or reduce polarization online. Projects may focus on areas such as recommendation systems, media literacy, moderation, discussion tools, transparency, or interventions that encourage healthier and more diverse online interactions. Both technical and non-technical approaches are within scope.
 
@@ -26,6 +24,6 @@ See [`decisions/axes-of-variation/polarization.md`](../../decisions/axes-of-vari
 > **TODO (each group, async):** One-line summary of how your app differs from the others in this challenge.
 
 - **Hamra:**
-- **Sarek:**
+- **Sarek:** Vår lösning skiljer sig från de andra genom att den inte avgör om information är sann eller falsk, utan istället skapar transparens genom att visualisera dolda konflikter, redigeringsaktivitet och diskussionsmönster som kan leda till polarisering.
 - **Pieljekaise:** Medan andra grupper fokuserar på innehållet, synliggör vår lösning hur användarens flöde och algoritmer kan skapa filterbubblor och polarisering över tid.
 - **Tiveden:**

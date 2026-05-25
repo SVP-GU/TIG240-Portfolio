@@ -25,6 +25,6 @@
 | Group | (axis 1) | (axis 2) | (axis 3) | (axis 4) |
 |---|---|---|---|---|
 | Hamra | | | | |
-| Sarek | | | | |
+| Sarek |Brist på förståelse mellan olika perspektiv |Transparens genom visulisering av konflikter och informationsutveckling|Plattformsassisterad |Minskad polarisering gemom ökad transparens|
 | Pieljekaise | | | | |
 | Tiveden | | | | |

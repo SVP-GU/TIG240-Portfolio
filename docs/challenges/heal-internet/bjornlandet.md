@@ -73,15 +73,34 @@ Hemmafix bygger på:
 Kvartersfix fokuserar på hyperlokala community-trådar och decentraliserad användarinteraktion
 istället för centraliserade sociala flöden.
 
-- vs. **Peer 1:**
-- vs. **Peer 2:**
-- vs. **Peer 3:**
+Peers inom kursen:
+– Hemmafix vs. Lowwave: Fokus på hyperlokala relationer och kvartersbaserat kunskapsutbyte snarare än
+  innehållsupptäckt för kreatörer.
+– Hemmafix vs. Gemenskap: Bygger communities genom geografisk närhet och praktisk hjälp istället för
+  enbart gemensamma intressen.
+
+Andra liknande forum:
+– Hemmafix vs. Facebook Groups: Lokala diskussioner organiseras efter kvarter och behov istället för
+  algoritmstyrda flöden.
+– Hemmafix vs. Reddit: Bygger på verkliga geografiska gemenskaper och lokala relationer snarare än
+  anonyma intresseforum.
+
 ```
 
 ## 🌱 Vision / Future
 
 I framtiden skulle Kvartersfix kunna utvecklas med:
 ```
--
--
+- Expansion till fler städer samtidigt som lokala och kvartersbaserade communities bevaras för att skapa relevanta
+  och nära användarkontakter.
+- Kvarters-communitys som stärker tillit, tillhörighet och personliga interaktioner mellan användare i samma närområde.
+- Nischade communities för fler intressen och behov, exempelvis hobbyer, fritidsaktiviteter och andra former av lokalt
+  kunskapsutbyte.
+- Ett större peer-to-peer-ekosystem där människor kan dela erfarenheter, kunskap och hjälp inom olika områden.
+- Datadriven utveckling där AI lär sig av forumets interaktioner för att förbättra rekommendationer, innehåll och
+  användarupplevelse över tid.
+- Europeiska AI-lösningar för att stödja en mer öppen och lokal digital infrastruktur med fokus på användarnas
+  integritet.
+- Digital teknik som stärker mänskliga relationer genom att göra internet mer lokalt, tryggt och gemenskapsorienterat.
+
 ```

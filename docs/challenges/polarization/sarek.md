@@ -19,7 +19,7 @@ The solution visualizes conflict-related signals from Wikipedia articles directl
 - **Challenge:** *Polarization*  
 - **App title:**  WikiConflict
 - **One-liner:** A web extension that visualizes conflict and editing activity behind Wikipedia articles.
-- **Live URL:** 
+- **Live URL:** https://chromewebstore.google.com/detail/wiki-extension/bfieikokodfkpepggengbijmkpopmfgc?authuser=2&hl=en&fbclid=IwY2xjawSE-0tleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEexDqgaEMxTlE76uodHIRWpLl-6Rudyx9RyqRImGE2Q0LHmM1wRV3zzXlW1mQ_aem_8UBBlrs3qrAFReZB6sxygQ
 - **Repo URL:** https://github.com/SVP-GU/group-project-sarek.git
 - **Team members:** Fredric Jonsson, Marcus Serrander, Klara Nordén, Amina Kenjar, Summer Furniss
 - **Target users:** Wikipedia readers and contributors
@@ -66,7 +66,8 @@ Rather than deciding what is true or false, the solution focuses on transparency
 
 ## Demo
 
-_Add screenshots, GIFs, or links here._
+<img width="1280" height="800" alt="image" src="https://github.com/user-attachments/assets/f4d75fb9-2564-4dbd-8025-e189188144fe" />
+
 
 ---
 
@@ -100,10 +101,4 @@ A key learning was the importance of balancing transparency and functionality wi
 - Larger training datasets for the ML model
 - Better comparison between related articles and topic categories
 
----
-
-## Links
-
-- **Live Demo:**  
-- **GitHub Repository:**  
-- **Presentation:**  
+ 

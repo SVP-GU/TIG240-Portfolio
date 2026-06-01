@@ -29,8 +29,8 @@
 
 > *(To be filled in async by each group, one row per group.)*
 
-| Group | (axis 1) | (axis 2) | (axis 3) | (axis 4) |
+| Group | Layer of the stack | Sovereignty Focus | Criticality Level | Governance / Coordination Model |
 |---|---|---|---|---|
-| Garphyttan | | | | |
+| Garphyttan | Platform | Data sovereignty, innovation | Public services | Public-sector-led |
 | Muddus | | | | |
 | Töfsingdalen | | | | |

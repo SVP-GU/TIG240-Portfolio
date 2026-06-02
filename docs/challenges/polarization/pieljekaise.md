@@ -10,7 +10,7 @@
 - **Challenge:** Polarization
 - **App title:** Echo
 - **One-liner:** Förebygger polarizering genom att skapa medvetenhet om sin filterbubbla på sociala medier
-- **Live URL:** N/A
+- **Live URL:** https://amilmusic.github.io/Echo/#home 
 - **Repo URL:** https://github.com/SVP-GU/group-project-pieljekaise.git
 - **Team members:** Alexandra Kreuger, Alice Kjellander, Ebba Lindberg, Amil Music
 

@@ -11,7 +11,7 @@ Välkommen till vårt digitala kvarter. Klicka dig runt bland olika delar av pro
 | 🩹🌐 Challenge | Heal-Internet |
 | 💡 Idea | Hemmafix - forum community |
 | ☕ Community pitch | Ett decentraliserat peer-to-peer forum som kopplar ihop användare i lokala trådchattar där användare delar erfarenheter, hjälp, intressen och kunskap. |
-| 🛠 Prototype | [Vår prototyp](https://github.com/SVP-GU/group-project-bjornlandet/blob/main/src/app/main3.py) |
+| 🛠 Prototype | [Vår prototyp](https://group-project-bjornlandet-w.onrender.com/) |
 | 📍 Main street | [Björnlandet repository](https://github.com/SVP-GU/group-project-bjornlandet)  |
 
 

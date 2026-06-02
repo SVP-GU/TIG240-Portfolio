@@ -27,6 +27,6 @@
 
 | Group | (axis 1) | (axis 2) | (axis 3) | (axis 4) |
 |---|---|---|---|---|
-| Stenshuvud |platform|algorithmic|contributors|community-organizing|
+| Stenshuvud |*Platform*|*Algorithmic*|*Contributors*|*Community-organizing*|
 | Björnlandet | *Community* |*Community-led* | *Contributors* | *Community-organizing & educational* |
 | Sonfjället |*community* |*user controlled* |*contributers & consumers* | *technical & community-organizing*|

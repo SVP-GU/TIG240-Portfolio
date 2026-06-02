@@ -29,5 +29,5 @@ A platform that is built from the ground up for the elderly, not adapted afterwa
 
 ## How we differ from peers
 
-**Björnlandet:** Focus on connecting users to handymen while we connect elderly to eachother.
+**Björnlandet:** Focus on connecting users to handymen while we connect elderly to eachother.\
 **Solfjället:** Helping small artists gain an audience while we while we have created multisided communities.

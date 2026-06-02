@@ -28,5 +28,5 @@ See [`decisions/axes-of-variation/heal-internet.md`](../../decisions/axes-of-var
 > **TODO (each group, async):** One-line summary of how your app differs from the others in this challenge.
 
 - **Björnlandet:** Hemmafix gör internet mer lokalt genom kvartersbaserade communities och peer-to-peer hjälp.
-- **Stenshuvud:**
+- **Stenshuvud:** Gemenskap fokuserar på att hjälpa äldre få ett aktivt socialt liv och en bättre upplevelse på internet. 
 - **Sonfjället:**

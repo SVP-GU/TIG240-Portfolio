@@ -17,8 +17,8 @@ See [`decisions/axes-of-variation/polarization.md`](../../decisions/axes-of-vari
 > **TODO (each group):** Add a one-line entry below as part of your Session 2 PR.
 
 - *Hamra*
-- *Sarek*
-- *Pieljekaise*
+- [Sarek](sarek.md)
+- [Pieljekaise](pieljekaise.md)
 - *Tiveden*
 
 ## Differentiators
@@ -27,5 +27,5 @@ See [`decisions/axes-of-variation/polarization.md`](../../decisions/axes-of-vari
 
 - **Hamra:**
 - **Sarek:**
-- **Pieljekaise:**
-- **Tiveden:**
+- **Pieljekaise:** Medan andra grupper fokuserar på innehållet, synliggör vår lösning hur användarens flöde och algoritmer kan skapa filterbubblor och polarisering över tid.
+- **Tiveden:** Vår lösning visar hur politiska diskussioner på Reddit kan eskalera över tid och hjälper moderatorer att förstå vilka trådar som bör prioriteras innan de blir svårare att hantera.

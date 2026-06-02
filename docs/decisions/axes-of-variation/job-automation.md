@@ -12,8 +12,12 @@
 - **Time horizon:** today's tasks / 3-year shifts / generational transition
 
 ## Agreed axes
+- **Worker focus:** knowledge workers / manual workers / managers / new entrants
+- **Frame:** augment / replace / retrain / regulate
+- **Approach:** tool / training programme / policy intervention / data & measurement
+- **Type of data:** Structured / Unstructured / Semi-structured 
 
-> *(To be filled in by the cluster in Session 1.)*
+
 
 ## Group positions
 

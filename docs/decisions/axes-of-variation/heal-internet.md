@@ -13,10 +13,13 @@
 
 ## Agreed axes
 
-*Type of solution*: tool / platform / community / policy
-*Decision-making*: algorithmic / moderator-led / community-led / user-controlled
-*Role of users*: consumers / contributors / moderators / organizers
-*Approach*: technical / educational / regulatory / community-organizing
+- *Type of solution*: tool / platform / community / policy
+
+- *Decision-making*: algorithmic / moderator-led / community-led / user-controlled
+
+- *Role of users*: consumers / contributors / moderators / organizers
+
+- *Approach*: technical / educational / regulatory / community-organizing
 
 ## Group positions
 
@@ -24,6 +27,6 @@
 
 | Group | (axis 1) | (axis 2) | (axis 3) | (axis 4) |
 |---|---|---|---|---|
-| Björnlandet | | | | |
 | Stenshuvud |platform|algorithmic|contributors|community-organizing|
-| Sonfjället | | | | |
+| Björnlandet | *Community* |*Community-led* | *Contributors* | *Community-organizing & educational* |
+| Sonfjället |*community* |*user controlled* |*contributers & consumers* | *technical & community-organizing*|

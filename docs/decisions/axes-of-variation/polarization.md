@@ -27,4 +27,4 @@
 | Hamra | | | | |
 | Sarek | | | | |
 | Pieljekaise | | | | |
-| Tiveden | | | | |
+| Tiveden |Echo chambers |Deliberative discussion |Moderator-driven |Better discussions |

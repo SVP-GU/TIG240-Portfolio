@@ -28,4 +28,4 @@ See [`decisions/axes-of-variation/polarization.md`](../../decisions/axes-of-vari
 - **Hamra:**
 - **Sarek:**
 - **Pieljekaise:** Medan andra grupper fokuserar på innehållet, synliggör vår lösning hur användarens flöde och algoritmer kan skapa filterbubblor och polarisering över tid.
-- **Tiveden:**
+- **Tiveden:** Vår lösning visar hur politiska diskussioner på Reddit kan eskalera över tid och hjälper moderatorer att förstå vilka trådar som bör prioriteras innan de blir svårare att hantera.

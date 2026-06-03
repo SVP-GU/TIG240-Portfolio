@@ -15,7 +15,7 @@ See [`decisions/axes-of-variation/job-automation.md`](../../decisions/axes-of-va
 > **TODO (each group):** Add a one-line entry below as part of your Session 2 PR.
 
 - *Abisko*
-- *Padjelanta*
+- [*Padjelanta*](padjelanta.md)
 - *Skuleskogen*
 - *Ängsö*
 
